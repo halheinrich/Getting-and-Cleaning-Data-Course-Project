@@ -1,3 +1,4 @@
+## Set working directory
 setwd("E:/Users/Hal/Documents/R/Getting and Cleaning Data/Course Project")
 
 ## Load test data
@@ -10,7 +11,7 @@ testColCt <- ncol(testData)
 testActivityIdData <- read.csv(testActivityIdFileName, header=FALSE, sep="\t")
 testSubjectIdData <- read.csv(testSubjectIdFileName, header=FALSE, sep="\t")
 
-## Load test data
+## Load train data
 trainFileName <- "E://Users//Hal//Documents//R//Getting and Cleaning Data//Course Project//UCI HAR Dataset//train//X_train.txt"
 trainActivityIdFileName <- "E://Users//Hal//Documents//R//Getting and Cleaning Data//Course Project//UCI HAR Dataset//train//y_train.txt"
 trainSubjectIdFileName <- "E://Users//Hal//Documents//R//Getting and Cleaning Data//Course Project//UCI HAR Dataset//train//subject_train.txt"
@@ -70,7 +71,7 @@ summarizedExtractedData <- suppressWarnings(aggregate(extractedData, list(Activi
 summarizedExtractedData$activityDescrip <- NULL
 summarizedExtractedData$subjectId <- NULL
 
-## Write out table
+## Write out table 
 outputFileName <- "E://Users//Hal//Documents//R//Getting and Cleaning Data//Course Project//step5.txt"
 write.table(summarizedExtractedData, file = outputFileName, row.name = FALSE)
 
