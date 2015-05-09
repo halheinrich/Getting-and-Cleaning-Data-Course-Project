@@ -1,0 +1,24 @@
+Download the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+Unzip the data into the "UCI HAR Dataset" folder of the working directory. 
+
+Load the test data and the training data. Note that the testdata has a header row, but the training data doesn't.
+
+Merge the test data and the training data.
+
+Add the activity id to the merged data.
+
+Add the subject id to the merged data.
+
+Extract columns containing the string "mean()" or "std()" along with the activity id and subject id.
+
+Lookup the activity description from the activity_labels.txt file and replace the activity id column with it.
+
+Clean up the column names by:
+   - dropping the X??? data
+   - removing the dots
+   - seperating "mean" and "std" with an underscore
+
+Extract the column averages grouped by activity and subject.
+
+Write that extraction to a file named "step5.txt"
